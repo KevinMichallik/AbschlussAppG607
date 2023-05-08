@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">G607</string>
+
+    <string name="G607_Header">G607 Prüfung</string>
+
+    <string name="Kunde_Name">Name</string>
+    <string name="Fahrzeug">Fahrzeugart</string>
+    <string name="Fahrgestellnummer">VIN</string>
+
+    <string name="Prüftyp">Prüfung gemäß DIN EN 1949 (G607)</string>
+
+    <string name="test_a">Die technische Ausrüstung der Flüssiggasanlage entspricht den Angaben der Herstellerbescheinigung.</string>
+    <string name="test_b">Sichtprüfung und Durchführung der Dichtheitsprüfung (Prüfdruck/-medium: 150mbar / Luft).</string>
+    <string name="test_c">Brennprobe mit Funktionsprüfung der Zündsicherung.</string>
+    <string name="test_d">Brennprobe mit Funktionsprüfung des Druckregelgerätes / der Geräteabsperreinrichtungen.</string>
+    <string name="test_e">Die Flüssiggasanlage einschließlich der Abgasführung und der Verbrennungsluftzuführung entsprechen dem technischen Regelwerk.</string>
+    <string name="test_f">Die Prüfplakette wurde vergeben.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.g607.ui.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_pruefungFragment"
+            app:destination="@id/pruefungFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_galerieFragment"
+            app:destination="@id/galerieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pruefungFragment"
+        android:name="com.example.g607.ui.PruefungFragment"
+        android:label="fragment_pruefung"
+        tools:layout="@layout/fragment_pruefung" >
+        <action
+            android:id="@+id/action_pruefungFragment_to_pruefung1Fragment"
+            app:destination="@id/pruefung1Fragment" />
+        <action
+            android:id="@+id/action_pruefungFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pruefung1Fragment"
+        android:name="com.example.g607.ui.Pruefung1Fragment"
+        android:label="fragment_pruefung1"
+        tools:layout="@layout/fragment_pruefung1" >
+        <action
+            android:id="@+id/action_pruefung1Fragment_to_pruefungFragment"
+            app:destination="@id/pruefungFragment" />
+        <action
+            android:id="@+id/action_pruefung1Fragment_to_pruefung2Fragment"
+            app:destination="@id/pruefung2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pruefung2Fragment"
+        android:name="com.example.g607.ui.Pruefung2Fragment"
+        android:label="Pruefung2Fragment"
+        tools:layout="@layout/fragment_pruefung2">
+        <action
+            android:id="@+id/action_pruefung2Fragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/galerieFragment"
+        android:name="com.example.g607.ui.GalerieFragment"
+        android:label="GalerieFragment"
+        tools:layout="@layout/fragment_galerie">
+        <action
+            android:id="@+id/action_galerieFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
