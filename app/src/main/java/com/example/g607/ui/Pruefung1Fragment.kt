@@ -16,7 +16,6 @@ class Pruefung1Fragment : Fragment() {
     //binding for this Fragment
     private lateinit var binding: FragmentPruefung1Binding
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,16 +28,13 @@ class Pruefung1Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-
         // Navigation to next
         binding.btn1Next.setOnClickListener {
             findNavController().navigate(Pruefung1FragmentDirections.actionPruefung1FragmentToPruefung2Fragment())
         }
-
         // Navigate back
         binding.btn1Back.setOnClickListener {
             findNavController().navigate(Pruefung1FragmentDirections.actionPruefung1FragmentToPruefungFragment())
         }
-
-
-    }}
+    }
+}

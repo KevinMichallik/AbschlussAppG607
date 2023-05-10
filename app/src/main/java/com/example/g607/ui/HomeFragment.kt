@@ -15,27 +15,25 @@ class HomeFragment : Fragment() {
     //binding for this Fragment
     private lateinit var binding: FragmentHomeBinding
 
-
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
 
         // permission to Layout
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        binding.ivHome.setImageResource(R.drawable.plakette_g607_png)
 
-        // Navigation to Fragment "TestG607Fragment"
+        // Navigation for Start Button on Home to begin Test
         binding.btnHomeStart.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToPruefungFragment())
         }
-
+        // Navigation for Galery Button to show Galery Fragment
         binding.btnHomeGalerie.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToGalerieFragment())
         }
-
-    }}
+    }
+}
