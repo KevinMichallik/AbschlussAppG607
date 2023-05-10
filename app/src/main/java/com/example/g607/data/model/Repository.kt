@@ -7,7 +7,13 @@ class Repository {
 
     fun loadPictures(): List<Pictures> {
         return listOf(
-            Pictures(R.drawable.plakette_g607_png), Pictures(R.drawable.wohnmobil_typ_alkoven)
+            Pictures(R.drawable.galery_1),
+            Pictures(R.drawable.galery_2),
+            Pictures(R.drawable.galery_3),
+            Pictures(R.drawable.galery_4),
+            Pictures(R.drawable.galery_5),
+            Pictures(R.drawable.galery_6),
+            Pictures(R.drawable.galery_7)
 
         )
 

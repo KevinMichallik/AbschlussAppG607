@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="65dp"
-            android:text="Kennzeichen"
+            android:text="Kennz."
             android:textColor="@color/white"
             android:textSize="20dp"
             app:layout_constraintStart_toStartOf="parent"
