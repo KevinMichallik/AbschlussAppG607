@@ -29,32 +29,38 @@ class PruefungFragment : Fragment() {
         // Navigation to next
         binding.btnftNext.setOnClickListener {
 
+            // Check if Name is entered
             if (binding.etName.text.toString().isEmpty()){
                 Toast.makeText(requireContext(), "Bitte Name eintragen !", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            // Check if Kennzeichen is entered
             if (binding.etKennzeichen.text.toString().isEmpty()){
                 Toast.makeText(requireContext(), "Bitte Kennzeichen eintragen !", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            // Check if VIN is entered
             if (binding.etVin.text.toString().isEmpty()){
                 Toast.makeText(requireContext(), "Bitte VIN eintragen !", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            // Check if Typ is entered
             if (binding.etTyp.text.toString().isEmpty()){
                 Toast.makeText(requireContext(), "Bitte Fahrzeugart eintragen !", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            // Create an action to navigate to next fragment with data entered by user
             val action = PruefungFragmentDirections.actionPruefungFragmentToPruefung1Fragment(
                 binding.etName.text.toString(),
                 binding.etKennzeichen.text.toString(),
                 binding.etVin.text.toString(),
                 binding.etTyp.text.toString()
             )
+            // Navigate to next fragment
             findNavController().navigate(action)
         }
 
-        // Navigate back
+        // Navigate to Home Fragment
         binding.btnftBack.setOnClickListener {
             findNavController().navigate(PruefungFragmentDirections.actionPruefungFragmentToHomeFragment())
         }

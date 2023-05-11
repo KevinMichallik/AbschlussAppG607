@@ -22,7 +22,9 @@ class Pruefung1Fragment : Fragment() {
 
     //binding for this Fragment
     private lateinit var binding: FragmentPruefung1Binding
+    // Store the arguments passed to this fragment
     private val args: Pruefung1FragmentArgs by navArgs()
+    // Initialize a local database
     private lateinit var clientTestDatabase: ClientTestDatabase
 
 
@@ -31,23 +33,25 @@ class Pruefung1Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        // permission to Layout
+        // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_pruefung1, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        // Get a reference to the local database
         clientTestDatabase = ClientTestDatabase.getDataBase(requireContext())
 
-        // Navigation to next
+        // Set up a click listener for the "next" button
         binding.btn1Next.setOnClickListener {
+            // Check if the "bemerkungen" field is empty
             if (binding.etBemerkungen.text.toString().isEmpty()) {
                 Toast.makeText(requireContext(), "Please enter bemerkungen", Toast.LENGTH_SHORT)
                     .show()
                 return@setOnClickListener
             }
-
+            // Save the entered data to the local database
             lifecycleScope.launch(Dispatchers.IO) {
                 val clientTest = ClientTest(
                     0,
@@ -69,11 +73,13 @@ class Pruefung1Fragment : Fragment() {
                 )
             }
             Toast.makeText(requireContext(), "Data Saved", Toast.LENGTH_SHORT).show()
+            // Navigate to the next fragment
             findNavController().navigate(Pruefung1FragmentDirections.actionPruefung1FragmentToPruefung2Fragment())
         }
 
-        // Navigate back
+        // Set up a click listener for the "back" button
         binding.btn1Back.setOnClickListener {
+            // Navigate to the previous fragment
             findNavController().navigate(Pruefung1FragmentDirections.actionPruefung1FragmentToPruefungFragment())
         }
 

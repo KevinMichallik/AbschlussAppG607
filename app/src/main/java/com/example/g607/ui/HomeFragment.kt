@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.g607.R
 import com.example.g607.databinding.FragmentHomeBinding
+import org.w3c.dom.Entity
 
 class HomeFragment : Fragment() {
 
@@ -24,6 +25,7 @@ class HomeFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        // Set the image resource for the ImageView in this Fragment
         binding.ivHome.setImageResource(R.drawable.plakette_g607_png)
 
         // Navigation for Start Button on Home to begin Test
