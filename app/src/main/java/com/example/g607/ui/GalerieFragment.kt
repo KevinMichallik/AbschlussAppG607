@@ -10,7 +10,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.g607.R
 import com.example.g607.adapter.GaleryAdapter
-import com.example.g607.data.model.Repository
+import com.example.g607.data.Repository
 import com.example.g607.databinding.FragmentGalerieBinding
 
 

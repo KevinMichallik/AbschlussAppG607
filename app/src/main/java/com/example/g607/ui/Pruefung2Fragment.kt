@@ -30,9 +30,6 @@ class Pruefung2Fragment : Fragment() {
         binding.btn2Next.setOnClickListener {
             findNavController().navigate(Pruefung2FragmentDirections.actionPruefung2FragmentToHomeFragment())
         }
-        // Navigate back
-        binding.btn2Back.setOnClickListener {
-            findNavController().navigate(Pruefung2FragmentDirections.actionPruefung2FragmentToPruefung1Fragment())
+
         }
     }
-}

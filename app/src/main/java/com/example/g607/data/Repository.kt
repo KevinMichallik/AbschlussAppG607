@@ -1,6 +1,7 @@
-package com.example.g607.data.model
+package com.example.g607.data
 
 import com.example.g607.R
+import com.example.g607.data.model.Pictures
 
 class Repository {
 

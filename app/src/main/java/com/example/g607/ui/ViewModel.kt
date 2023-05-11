@@ -1,7 +1,7 @@
 package com.example.g607.ui
 
 import androidx.lifecycle.ViewModel
-import com.example.g607.data.model.Repository
+import com.example.g607.data.Repository
 
 class ViewModel : ViewModel() {
 

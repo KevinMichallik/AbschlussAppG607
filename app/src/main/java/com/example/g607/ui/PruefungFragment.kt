@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -27,11 +28,34 @@ class PruefungFragment : Fragment() {
 
         // Navigation to next
         binding.btnftNext.setOnClickListener {
-            findNavController().navigate(PruefungFragmentDirections.actionPruefungFragmentToPruefung1Fragment())
+
+            if (binding.etName.text.toString().isEmpty()){
+                Toast.makeText(requireContext(), "Bitte Name eintragen !", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (binding.etKennzeichen.text.toString().isEmpty()){
+                Toast.makeText(requireContext(), "Bitte Kennzeichen eintragen !", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (binding.etVin.text.toString().isEmpty()){
+                Toast.makeText(requireContext(), "Bitte VIN eintragen !", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (binding.etTyp.text.toString().isEmpty()){
+                Toast.makeText(requireContext(), "Bitte Fahrzeugart eintragen !", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            val action = PruefungFragmentDirections.actionPruefungFragmentToPruefung1Fragment(
+                binding.etName.text.toString(),
+                binding.etKennzeichen.text.toString(),
+                binding.etVin.text.toString(),
+                binding.etTyp.text.toString()
+            )
+            findNavController().navigate(action)
         }
+
         // Navigate back
         binding.btnftBack.setOnClickListener {
             findNavController().navigate(PruefungFragmentDirections.actionPruefungFragmentToHomeFragment())
         }
-    }
-}
+    }}
